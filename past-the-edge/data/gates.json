@@ -1,0 +1,447 @@
+{
+ "title": "HOW FAR PAST THE EDGE?",
+ "claim": "In an ideal 2-D model of identical, rigid, homogeneous, frictionless blocks, counterweights raise the maximum balanced overhang: for four blocks the balance limit is 1.1679 block lengths, against 1.0417 under the one-on-one rule (+12.1%); for three blocks it is 1.0000 against 11/12 (+9.1%), and any positive contact margin removes that three-block gain. Both are balance limits with zero margin.",
+ "on_screen": {
+  "setup": "4 IDENTICAL BLOCKS AT A TABLE EDGE",
+  "moves": "REPOSITIONED THROUGH BALANCED STATES",
+  "none": "NO BALANCING FORCE SET EXISTS",
+  "forces": "ONE BALANCING SET OF CONTACT FORCES",
+  "model": "IDEAL 2-D MODEL: RIGID, IDENTICAL, HOMOGENEOUS, FRICTIONLESS BLOCKS",
+  "limits": "BALANCE LIMITS: ZERO CONTACT MARGIN",
+  "one": "ONE-ON-ONE BALANCE LIMIT: 1.04 BLOCK LENGTHS",
+  "free": "UNRESTRICTED BALANCE LIMIT: 1.17 BLOCK LENGTHS",
+  "gain": "MAXIMUM BALANCED OVERHANG: +12%",
+  "three": "3 BLOCKS: +9% ONLY AT ZERO CONTACT MARGIN"
+ },
+ "silent": {
+  "gain": "+12%",
+  "result": "4 blocks: 1.04 to 1.17 block lengths, +12%",
+  "three": "3 blocks: +9% only at zero contact margin",
+  "limits": [
+   "ideal 2-D model: rigid, identical, homogeneous, frictionless blocks",
+   "balance limits: zero contact margin"
+  ]
+ },
+ "narration": {
+  "a1": "Four identical blocks at a table edge.",
+  "b1": "Under the one-on-one rule, the maximum balanced overhang is one point zero four block lengths.",
+  "b2": "At that limit, the top block is entirely past the table.",
+  "b3": "Beyond this one-on-one limit, no balancing force set exists.",
+  "c1": "Now allow blocks side by side, so weight can sit behind the edge.",
+  "c2": "For the same four blocks, the unrestricted balance limit is one point one seven.",
+  "d1": "The rear block presses down on the bottom block's inner end, while the top block presses down on the front block's inner end.",
+  "e1": "Twelve percent farther, in an ideal model of rigid, identical, homogeneous, frictionless blocks.",
+  "f1": "With three blocks, the nine-percent gain requires exact placement: any positive contact margin removes it.",
+  "z1": "Both shown values are balance limits with zero contact margin."
+ },
+ "values": {
+  "one_on_one_4": 1.0416666666666667,
+  "unrestricted_4": 1.1678932188135989,
+  "gain_4": 0.12117749006105494,
+  "gain_3": 0.09090909090912791,
+  "one_on_one_3": 0.9166666666666666,
+  "unrestricted_3": 1.000000000000034
+ },
+ "stacks": {
+  "four": {
+   "value": 1.1678932188135989,
+   "xs": [
+    -0.47855339059439217,
+    -1.1562110850988374,
+    0.1678932188135989,
+    -0.5331287431198358
+   ],
+   "violation": 1.3137397873968021e-13,
+   "key": "1,2,1|0000;01",
+   "target": 2
+  },
+  "three": {
+   "value": 1.000000000000034,
+   "xs": [
+    -0.4999999999999664,
+    -0.9999999999999671,
+    3.395200787181807e-14
+   ],
+   "violation": 3.2332101405907476e-14,
+   "key": "1,2|0000",
+   "target": 2
+  }
+ },
+ "gates": [
+  {
+   "name": "enumeration",
+   "per_n": {
+    "1": {
+     "topologies": 1,
+     "realisable": 1,
+     "runs": 1,
+     "solved_a": 1,
+     "solved_b": 1,
+     "unrealisable": 0,
+     "closure_only": 0,
+     "empty": 0,
+     "no_balanced_placement": 0,
+     "unsolved_not_certified": [],
+     "partial": []
+    },
+    "2": {
+     "topologies": 2,
+     "realisable": 2,
+     "runs": 3,
+     "solved_a": 3,
+     "solved_b": 3,
+     "unrealisable": 0,
+     "closure_only": 0,
+     "empty": 0,
+     "no_balanced_placement": 0,
+     "unsolved_not_certified": [],
+     "partial": []
+    },
+    "3": {
+     "topologies": 6,
+     "realisable": 6,
+     "runs": 12,
+     "solved_a": 12,
+     "solved_b": 12,
+     "unrealisable": 0,
+     "closure_only": 0,
+     "empty": 0,
+     "no_balanced_placement": 0,
+     "unsolved_not_certified": [],
+     "partial": []
+    },
+    "4": {
+     "topologies": 22,
+     "realisable": 22,
+     "runs": 52,
+     "solved_a": 50,
+     "solved_b": 50,
+     "unrealisable": 0,
+     "closure_only": 0,
+     "empty": 0,
+     "no_balanced_placement": 1,
+     "unsolved_not_certified": [],
+     "partial": []
+    },
+    "5": {
+     "topologies": 91,
+     "realisable": 88,
+     "runs": 237,
+     "solved_a": 201,
+     "solved_b": 201,
+     "unrealisable": 3,
+     "closure_only": 1,
+     "empty": 2,
+     "no_balanced_placement": 14,
+     "unsolved_not_certified": [],
+     "partial": []
+    },
+    "6": {
+     "topologies": 406,
+     "realisable": 360,
+     "runs": 1083,
+     "solved_a": 809,
+     "solved_b": 809,
+     "unrealisable": 46,
+     "closure_only": 23,
+     "empty": 23,
+     "no_balanced_placement": 91,
+     "unsolved_not_certified": [],
+     "partial": []
+    }
+   },
+   "coverage_sampled": 48000,
+   "coverage_missing": 0,
+   "certificate_controls": {
+    "1,2|0000": false,
+    "1,2,1|0000;01": false,
+    "1,1,1,1|00;00;00": false,
+    "2,2|0101": false
+   },
+   "bad": [],
+   "passes": true
+  },
+  {
+   "name": "reproduction",
+   "per_n": {
+    "1": {
+     "registered": "0.500000",
+     "a": 0.5000000000000007,
+     "b": 0.5000000000000032,
+     "one_on_one": 0.5,
+     "one_a": 0.5000000000000007,
+     "one_b": 0.5000000000000032,
+     "tolerance": 5.00001e-07,
+     "ok": true
+    },
+    "2": {
+     "registered": "0.750000",
+     "a": 0.7500000000000724,
+     "b": 0.7500000000000051,
+     "one_on_one": 0.75,
+     "one_a": 0.7500000000000724,
+     "one_b": 0.7500000000000051,
+     "tolerance": 5.00001e-07,
+     "ok": true
+    },
+    "3": {
+     "registered": "1.000000",
+     "a": 1.000000000000034,
+     "b": 1.0000000000000107,
+     "one_on_one": 0.9166666666666666,
+     "one_a": 0.9166666666666871,
+     "one_b": 0.9166666666667931,
+     "tolerance": 5.00001e-07,
+     "ok": true
+    },
+    "4": {
+     "registered": "1.167893219",
+     "a": 1.1678932188135989,
+     "b": 1.1678932188168203,
+     "one_on_one": 1.0416666666666667,
+     "one_a": 1.041666666666689,
+     "one_b": 1.0416666666673968,
+     "tolerance": 5.01e-10,
+     "ok": true
+    },
+    "5": {
+     "registered": "1.30455",
+     "a": 1.3045548849900928,
+     "b": 1.304554884989869,
+     "one_on_one": 1.1416666666666666,
+     "one_a": 1.1416666666669173,
+     "one_b": 1.14166666666688,
+     "tolerance": 5.000001000000001e-06,
+     "ok": true
+    },
+    "6": {
+     "registered": "1.43670",
+     "a": 1.436700214371888,
+     "b": 1.4367002143713876,
+     "one_on_one": 1.225,
+     "one_a": 1.2250000000006036,
+     "one_b": 1.2250000000002308,
+     "tolerance": 5.000001000000001e-06,
+     "ok": true
+    }
+   },
+   "four_closed_form": 1.1678932188134525,
+   "four_minus_closed_form": 1.4632739464559563e-13,
+   "bad": [],
+   "passes": true
+  },
+  {
+   "name": "harmonic",
+   "bad": [],
+   "passes": true
+  },
+  {
+   "name": "verify",
+   "worst_residual": 2.0534685063466895e-12,
+   "bad": [],
+   "passes": true
+  },
+  {
+   "name": "certificate",
+   "per_n": {
+    "1": {
+     "certified": true,
+     "bound": 0.5000000000000007,
+     "gap": 0.002,
+     "boxes": [
+      0,
+      0
+     ]
+    },
+    "2": {
+     "certified": true,
+     "bound": 0.7500000000000724,
+     "gap": 0.002,
+     "boxes": [
+      11,
+      11
+     ]
+    },
+    "3": {
+     "certified": true,
+     "bound": 1.000000000000034,
+     "gap": 0.002,
+     "boxes": [
+      155,
+      155
+     ]
+    },
+    "4": {
+     "certified": true,
+     "bound": 1.1678932188135989,
+     "gap": 0.002,
+     "boxes": [
+      13764,
+      13764
+     ]
+    }
+   },
+   "bad": [],
+   "passes": true
+  },
+  {
+   "name": "height",
+   "per_n": {
+    "3": {
+     "spread": 0.0,
+     "balanced_every_height": true
+    },
+    "4": {
+     "spread": 0.0,
+     "balanced_every_height": true
+    }
+   },
+   "bad": [],
+   "passes": true
+  },
+  {
+   "name": "gain",
+   "per_n": {
+    "3": {
+     "one_on_one": 0.9166666666666666,
+     "unrestricted": 1.000000000000034,
+     "gain": 0.09090909090912791,
+     "gain_upper": 0.0930909090909462,
+     "u": 0.002001000000123679,
+     "parts": {
+      "lp_tolerance": 1e-06,
+      "residuals": 1.0036416142611415e-13,
+      "formulations": 2.3314683517128287e-14,
+      "certificate_gap": 0.002
+     },
+     "line": 0.05,
+     "ok": true
+    },
+    "4": {
+     "one_on_one": 1.0416666666666667,
+     "unrestricted": 1.1678932188135989,
+     "gain": 0.12117749006105494,
+     "gain_upper": 0.12309749006105486,
+     "u": 0.002001000013873569,
+     "parts": {
+      "lp_tolerance": 1e-06,
+      "residuals": 1.0652145832068527e-11,
+      "formulations": 3.2214231282523542e-12,
+      "certificate_gap": 0.002
+     },
+     "line": 0.05,
+     "ok": true
+    }
+   },
+   "bad": [],
+   "passes": true
+  },
+  {
+   "name": "margin",
+   "three_gain": [
+    [
+     1e-06,
+     0.0
+    ],
+    [
+     0.001,
+     0.0
+    ],
+    [
+     0.005,
+     0.0
+    ],
+    [
+     0.01,
+     0.0
+    ],
+    [
+     0.02,
+     0.0
+    ],
+    [
+     0.05,
+     0.0
+    ]
+   ],
+   "three_vanishes": true,
+   "proof_consistent": true,
+   "four_gain_holds_to": 0.05,
+   "four_gain_holds": true,
+   "caveat_on_screen_and_spoken": true,
+   "passes": true
+  },
+  {
+   "name": "forces",
+   "states": {
+    "harmonic_4": {
+     "residual": 1.887379141862766e-15,
+     "negative": 1.8041124150158794e-15
+    },
+    "harmonic_3": {
+     "residual": 6.661338147750939e-16,
+     "negative": 0.0
+    },
+    "unrestricted_4": {
+     "residual": 1.3322676295501878e-15,
+     "negative": 1.1124434706744069e-12
+    },
+    "unrestricted_3": {
+     "residual": 1.2212453270876722e-15,
+     "negative": 7.771561172376096e-16
+    }
+   },
+   "load_path": {
+    "rear_on_bottom": {
+     "upper": 1,
+     "lower": 0,
+     "left_end": -0.47855339059439217,
+     "lower_left_end": -0.47855339059439217,
+     "total": 1.5857864376218458,
+     "other_end_max": -1.6142642778049776e-13
+    },
+    "top_on_front": {
+     "upper": 3,
+     "lower": 2,
+     "left_end": 0.1678932188135989,
+     "lower_left_end": 0.1678932188135989,
+     "total": 0.414213562377568,
+     "other_end_max": -6.931889828490812e-13
+    }
+   },
+   "top_block_left_end": 0.04166666666666674,
+   "bad": [],
+   "passes": true
+  },
+  {
+   "name": "spoken",
+   "checks": {
+    "b1": [
+     1.04,
+     1.04
+    ],
+    "c2": [
+     1.17,
+     1.17
+    ],
+    "e1": [
+     12,
+     12
+    ],
+    "f1": [
+     9,
+     9
+    ]
+   },
+   "bad": {},
+   "passes": true
+  },
+  {
+   "name": "wording",
+   "hits": [],
+   "passes": true
+  }
+ ],
+ "passed": 11,
+ "total": 11
+}

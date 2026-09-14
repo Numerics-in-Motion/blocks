@@ -1,0 +1,609 @@
+{
+  "study": "maximum balanced overhang of identical blocks",
+  "title": "HOW FAR PAST THE EDGE?",
+  "claim": "In an ideal 2-D model of identical, rigid, homogeneous, frictionless blocks, counterweights raise the maximum balanced overhang: for four blocks the balance limit is 1.1679 block lengths, against 1.0417 under the one-on-one rule (+12.1%); for three blocks it is 1.0000 against 11/12 (+9.1%), and any positive contact margin removes that three-block gain. Both are balance limits with zero margin.",
+  "on_screen": {
+    "setup": "4 IDENTICAL BLOCKS AT A TABLE EDGE",
+    "moves": "REPOSITIONED THROUGH BALANCED STATES",
+    "none": "NO BALANCING FORCE SET EXISTS",
+    "forces": "ONE BALANCING SET OF CONTACT FORCES",
+    "model": "IDEAL 2-D MODEL: RIGID, IDENTICAL, HOMOGENEOUS, FRICTIONLESS BLOCKS",
+    "limits": "BALANCE LIMITS: ZERO CONTACT MARGIN",
+    "one": "ONE-ON-ONE BALANCE LIMIT: 1.04 BLOCK LENGTHS",
+    "free": "UNRESTRICTED BALANCE LIMIT: 1.17 BLOCK LENGTHS",
+    "gain": "MAXIMUM BALANCED OVERHANG: +12%",
+    "three": "3 BLOCKS: +9% ONLY AT ZERO CONTACT MARGIN"
+  },
+  "model": {
+    "source": "Paterson & Zwick, Overhang, Amer. Math. Monthly 116 (2009); arXiv:0710.2357",
+    "block_length": 1,
+    "block_weight": 1,
+    "table": "x <= 0",
+    "friction": "none: all forces vertical",
+    "starts": 24,
+    "seed": 39,
+    "lp_tolerances": [
+      1e-07,
+      1e-10
+    ],
+    "push": 1e-06,
+    "certificate_eps": 0.002,
+    "margins": [
+      0.0,
+      1e-06,
+      0.001,
+      0.005,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "heights": [
+      0.1,
+      0.25,
+      1.0,
+      2.0
+    ]
+  },
+  "what_is_not_claimed": "Balance and nothing more: every limit shown has zero contact margin, and the three-block gain disappears at any positive margin. No friction, no sliding or tipping dynamics (the moves in the video are quasi-static repositionings through balanced states), no rounded edges, uneven weights, deformation or 3-D effects. Nothing about real blocks, or about more than six blocks.",
+  "verification_not_validation": "Every candidate contact pattern of one to six blocks with closed contact intervals is generated. A linear programme keeps those that exist with exactly their own contacts; the others exist only with extra contacts, and are covered by the richer pattern, or not at all. Each one kept is either solved by two separately written formulations, which reproduce the published values of Paterson and Zwick and Ainley's four-block closed form, or certified by branch and bound to have no balanced placement. The one- to four-block maxima carry a branch-and-bound upper bound within a stated gap. All of it reads the same idealisation. No physical stack is reproduced here.",
+  "enumeration": {
+    "1": {
+      "topologies": 1,
+      "realisable": 1,
+      "closure_only": 0,
+      "empty": 0,
+      "no_balanced_placement": 0
+    },
+    "2": {
+      "topologies": 2,
+      "realisable": 2,
+      "closure_only": 0,
+      "empty": 0,
+      "no_balanced_placement": 0
+    },
+    "3": {
+      "topologies": 6,
+      "realisable": 6,
+      "closure_only": 0,
+      "empty": 0,
+      "no_balanced_placement": 0
+    },
+    "4": {
+      "topologies": 22,
+      "realisable": 22,
+      "closure_only": 0,
+      "empty": 0,
+      "no_balanced_placement": 1
+    },
+    "5": {
+      "topologies": 91,
+      "realisable": 88,
+      "closure_only": 1,
+      "empty": 2,
+      "no_balanced_placement": 14
+    },
+    "6": {
+      "topologies": 406,
+      "realisable": 360,
+      "closure_only": 23,
+      "empty": 23,
+      "no_balanced_placement": 91
+    }
+  },
+  "three_block_margin_proof": {
+    "rows": [
+      {
+        "margin": 1e-06,
+        "shrunk_harmonic": 0.9166648333333334,
+        "shrunk_harmonic_balanced": true,
+        "bound_2_1": 0.7499985,
+        "found_2_1": 0.749998500000028,
+        "found_1_2": null,
+        "found_3": 0.4999990000000002,
+        "found_one_on_one": 0.9166648333333787
+      },
+      {
+        "margin": 0.001,
+        "shrunk_harmonic": 0.9148333333333334,
+        "shrunk_harmonic_balanced": true,
+        "bound_2_1": 0.7485,
+        "found_2_1": 0.7485000000000295,
+        "found_1_2": null,
+        "found_3": 0.49900000000000055,
+        "found_one_on_one": 0.9148333333334533
+      },
+      {
+        "margin": 0.005,
+        "shrunk_harmonic": 0.9075,
+        "shrunk_harmonic_balanced": true,
+        "bound_2_1": 0.7425,
+        "found_2_1": 0.7425000000003477,
+        "found_1_2": null,
+        "found_3": 0.49500000000000066,
+        "found_one_on_one": 0.907500000000102
+      },
+      {
+        "margin": 0.01,
+        "shrunk_harmonic": 0.8983333333333333,
+        "shrunk_harmonic_balanced": true,
+        "bound_2_1": 0.735,
+        "found_2_1": 0.7350000000000201,
+        "found_1_2": null,
+        "found_3": 0.4900000000000011,
+        "found_one_on_one": 0.8983333333334209
+      },
+      {
+        "margin": 0.02,
+        "shrunk_harmonic": 0.88,
+        "shrunk_harmonic_balanced": true,
+        "bound_2_1": 0.72,
+        "found_2_1": 0.7200000000002882,
+        "found_1_2": null,
+        "found_3": 0.48000000000000065,
+        "found_one_on_one": 0.8800000000000808
+      },
+      {
+        "margin": 0.05,
+        "shrunk_harmonic": 0.825,
+        "shrunk_harmonic_balanced": true,
+        "bound_2_1": 0.675,
+        "found_2_1": 0.6750000000000463,
+        "found_1_2": null,
+        "found_3": 0.4500000000000012,
+        "found_one_on_one": 0.8250000000002508
+      }
+    ],
+    "consistent": true,
+    "argument": "The argument that ANY positive contact margin eps (0 < eps < 1/2) removes\n    the three-block gain, and its numerical check at every sampled margin.\n\n    Three blocks have four level splits. [3]: every block on the table, overhang\n    at most 1/2 - eps. [1,2]: each upper block rests on the bottom block alone,\n    so its centre lies inside its contact, eps from the ends; two disjoint unit\n    blocks on one unit block then need x_left + 1/2 >= x_b + eps and\n    x_right + 1/2 <= x_b + 1 - eps with x_right >= x_left + 1, i.e.\n    1 + 2 eps <= 1: no balanced placement. [2,1]: the right table block R carries\n    its own weight at x_R + 1/2 and at most the whole top block's weight f <= 1\n    at a point >= x_R + eps; its table resultant is <= -eps, so\n    x_R + 1 <= 1 - eps - (1/2 + f eps)/(1 + f) <= 3/4 - 3 eps/2 (the fraction\n    falls with f); the top block, if it rests on both table blocks, ends left of\n    R's end, and on one of them it is a two-block one-on-one stack. [1,1,1]: the\n    shrunk harmonic stack is balanced with margin eps and ends at\n    (1 - 2 eps) 11/12, which exceeds 3/4 - 3 eps/2 for every eps < 1/2. So the\n    largest three-block overhang at any margin 0 < eps < 1/2 belongs to the\n    one-on-one class: gain zero."
+  },
+  "values": {
+    "one_on_one_4": 1.0416666666666667,
+    "unrestricted_4": 1.1678932188135989,
+    "gain_4": 0.12117749006105494,
+    "gain_3": 0.09090909090912791,
+    "one_on_one_3": 0.9166666666666666,
+    "unrestricted_3": 1.000000000000034
+  },
+  "maxima": {
+    "1": {
+      "a": 0.5000000000000007,
+      "b": 0.5000000000000032,
+      "key": "1|",
+      "one_on_one": 0.5000000000000007,
+      "topologies": 1,
+      "no_balanced_placement": []
+    },
+    "2": {
+      "a": 0.7500000000000724,
+      "b": 0.7500000000000051,
+      "key": "1,1|00",
+      "one_on_one": 0.7500000000000724,
+      "topologies": 2,
+      "no_balanced_placement": []
+    },
+    "3": {
+      "a": 1.000000000000034,
+      "b": 1.0000000000000107,
+      "key": "1,2|0000",
+      "one_on_one": 0.9166666666666871,
+      "topologies": 6,
+      "no_balanced_placement": []
+    },
+    "4": {
+      "a": 1.1678932188135989,
+      "b": 1.1678932188168203,
+      "key": "1,2,1|0000;01",
+      "one_on_one": 1.041666666666689,
+      "topologies": 22,
+      "no_balanced_placement": [
+        "1,3|000000"
+      ]
+    },
+    "5": {
+      "a": 1.3045548849900928,
+      "b": 1.304554884989869,
+      "key": "1,2,2|0000;0111",
+      "one_on_one": 1.1416666666669173,
+      "topologies": 91,
+      "no_balanced_placement": [
+        "1,1,3|00;000000",
+        "1,2,2|0000;0000",
+        "1,2,2|0000;1111",
+        "1,3,1|000000;00",
+        "1,3,1|000000;01",
+        "1,3,1|000000;02",
+        "1,3,1|000000;12",
+        "1,3,1|000000;22",
+        "2,3|000000",
+        "2,3|000001",
+        "2,3|000101",
+        "2,3|010111",
+        "2,3|011111",
+        "2,3|111111"
+      ]
+    },
+    "6": {
+      "a": 1.436700214371888,
+      "b": 1.4367002143713876,
+      "key": "1,2,2,1|0000;0111;01",
+      "one_on_one": 1.2250000000006036,
+      "topologies": 406,
+      "no_balanced_placement": [
+        "1,1,1,3|00;00;000000",
+        "1,1,2,2|00;0000;0000",
+        "1,1,2,2|00;0000;1111",
+        "1,1,3,1|00;000000;00",
+        "1,1,3,1|00;000000;01",
+        "1,1,3,1|00;000000;02",
+        "1,1,3,1|00;000000;12",
+        "1,1,3,1|00;000000;22",
+        "1,2,2,1|0000;0000;00",
+        "1,2,2,1|0000;0000;01",
+        "1,2,2,1|0000;0000;11",
+        "1,2,2,1|0000;1111;00",
+        "1,2,2,1|0000;1111;01",
+        "1,2,2,1|0000;1111;11",
+        "1,2,3|0000;000001",
+        "1,2,3|0000;000011",
+        "1,2,3|0000;000101",
+        "1,2,3|0000;000111",
+        "1,2,3|0000;001111",
+        "1,2,3|0000;010111",
+        "1,2,3|0000;011111",
+        "1,3,1,1|000000;00;00",
+        "1,3,1,1|000000;01;00",
+        "1,3,1,1|000000;02;00",
+        "1,3,1,1|000000;12;00",
+        "1,3,1,1|000000;22;00",
+        "1,3,2|000000;0001",
+        "1,3,2|000000;0002",
+        "1,3,2|000000;0012",
+        "1,3,2|000000;0022",
+        "1,3,2|000000;0102",
+        "1,3,2|000000;0112",
+        "1,3,2|000000;0122",
+        "1,3,2|000000;0212",
+        "1,3,2|000000;0222",
+        "1,3,2|000000;1222",
+        "2,1,3|00;000000",
+        "2,1,3|01;000000",
+        "2,1,3|11;000000",
+        "2,2,2|0000;0000",
+        "2,2,2|0000;1111",
+        "2,2,2|1111;0000",
+        "2,2,2|1111;1111",
+        "2,3,1|000000;00",
+        "2,3,1|000000;01",
+        "2,3,1|000000;02",
+        "2,3,1|000000;12",
+        "2,3,1|000000;22",
+        "2,3,1|000001;00",
+        "2,3,1|000001;01",
+        "2,3,1|000001;02",
+        "2,3,1|000001;12",
+        "2,3,1|000001;22",
+        "2,3,1|000101;00",
+        "2,3,1|000101;01",
+        "2,3,1|000101;02",
+        "2,3,1|000101;12",
+        "2,3,1|000101;22",
+        "2,3,1|010111;00",
+        "2,3,1|010111;01",
+        "2,3,1|010111;02",
+        "2,3,1|010111;12",
+        "2,3,1|010111;22",
+        "2,3,1|011111;00",
+        "2,3,1|011111;01",
+        "2,3,1|011111;02",
+        "2,3,1|011111;12",
+        "2,3,1|011111;22",
+        "2,3,1|111111;00",
+        "2,3,1|111111;01",
+        "2,3,1|111111;02",
+        "2,3,1|111111;12",
+        "2,3,1|111111;22",
+        "2,4|00000011",
+        "2,4|00000111",
+        "2,4|00010111",
+        "2,4|00011111",
+        "2,4|00111111",
+        "3,3|000000",
+        "3,3|000001",
+        "3,3|000101",
+        "3,3|000102",
+        "3,3|010111",
+        "3,3|011111",
+        "3,3|021222",
+        "3,3|111111",
+        "3,3|111112",
+        "3,3|111212",
+        "3,3|121222",
+        "3,3|122222",
+        "3,3|222222"
+      ]
+    }
+  },
+  "registered": {
+    "1": "0.500000",
+    "2": "0.750000",
+    "3": "1.000000",
+    "4": "1.167893219",
+    "5": "1.30455",
+    "6": "1.43670"
+  },
+  "certificate": {
+    "1": {
+      "1e-07": {
+        "certified": true,
+        "boxes": 0
+      },
+      "1e-10": {
+        "certified": true,
+        "boxes": 0
+      }
+    },
+    "2": {
+      "1e-07": {
+        "certified": true,
+        "boxes": 11
+      },
+      "1e-10": {
+        "certified": true,
+        "boxes": 11
+      }
+    },
+    "3": {
+      "1e-07": {
+        "certified": true,
+        "boxes": 155
+      },
+      "1e-10": {
+        "certified": true,
+        "boxes": 155
+      }
+    },
+    "4": {
+      "1e-07": {
+        "certified": true,
+        "boxes": 13764
+      },
+      "1e-10": {
+        "certified": true,
+        "boxes": 13764
+      }
+    }
+  },
+  "certificate_gap": 0.002,
+  "gains": {
+    "3": {
+      "gain": 0.09090909090912791,
+      "u": 0.002001000000123679,
+      "line": 0.05
+    },
+    "4": {
+      "gain": 0.12117749006105494,
+      "u": 0.002001000013873569,
+      "line": 0.05
+    }
+  },
+  "margin": [
+    {
+      "n": 3,
+      "rows": [
+        {
+          "margin": 0.0,
+          "unrestricted": 1.000000000000034,
+          "unrestricted_key": "1,2|0000",
+          "one_on_one": 0.9166666666666871,
+          "by_composition": {
+            "3": 0.5000000000000002,
+            "1,2": 1.000000000000034,
+            "2,1": 0.750000000000049,
+            "1,1,1": 0.9166666666666871
+          },
+          "gain": 0.0909090909091037
+        },
+        {
+          "margin": 1e-06,
+          "unrestricted": 0.9166648333333787,
+          "unrestricted_key": "1,1,1|00;00",
+          "one_on_one": 0.9166648333333787,
+          "by_composition": {
+            "3": 0.4999990000000002,
+            "2,1": 0.749998500000028,
+            "1,1,1": 0.9166648333333787
+          },
+          "gain": 0.0
+        },
+        {
+          "margin": 0.001,
+          "unrestricted": 0.9148333333334533,
+          "unrestricted_key": "1,1,1|00;00",
+          "one_on_one": 0.9148333333334533,
+          "by_composition": {
+            "3": 0.49900000000000055,
+            "2,1": 0.7485000000000295,
+            "1,1,1": 0.9148333333334533
+          },
+          "gain": 0.0
+        },
+        {
+          "margin": 0.005,
+          "unrestricted": 0.907500000000102,
+          "unrestricted_key": "1,1,1|00;00",
+          "one_on_one": 0.907500000000102,
+          "by_composition": {
+            "3": 0.49500000000000066,
+            "2,1": 0.7425000000003477,
+            "1,1,1": 0.907500000000102
+          },
+          "gain": 0.0
+        },
+        {
+          "margin": 0.01,
+          "unrestricted": 0.8983333333334209,
+          "unrestricted_key": "1,1,1|00;00",
+          "one_on_one": 0.8983333333334209,
+          "by_composition": {
+            "3": 0.4900000000000011,
+            "2,1": 0.7350000000000201,
+            "1,1,1": 0.8983333333334209
+          },
+          "gain": 0.0
+        },
+        {
+          "margin": 0.02,
+          "unrestricted": 0.8800000000000808,
+          "unrestricted_key": "1,1,1|00;00",
+          "one_on_one": 0.8800000000000808,
+          "by_composition": {
+            "3": 0.48000000000000065,
+            "2,1": 0.7200000000002882,
+            "1,1,1": 0.8800000000000808
+          },
+          "gain": 0.0
+        },
+        {
+          "margin": 0.05,
+          "unrestricted": 0.8250000000002508,
+          "unrestricted_key": "1,1,1|00;00",
+          "one_on_one": 0.8250000000002508,
+          "by_composition": {
+            "3": 0.4500000000000012,
+            "2,1": 0.6750000000000463,
+            "1,1,1": 0.8250000000002508
+          },
+          "gain": 0.0
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "rows": [
+        {
+          "margin": 0.0,
+          "unrestricted": 1.1678932188135989,
+          "unrestricted_key": "1,2,1|0000;01",
+          "one_on_one": 1.041666666666689,
+          "by_composition": {
+            "4": 0.5000000000000007,
+            "2,2": 1.0000000000000335,
+            "3,1": 0.7500000000000273,
+            "1,1,2": 1.1250000000002847,
+            "1,2,1": 1.1678932188135989,
+            "2,1,1": 0.9166666666667832,
+            "1,1,1,1": 1.041666666666689
+          },
+          "gain": 0.12117749006103096
+        },
+        {
+          "margin": 1e-06,
+          "unrestricted": 1.1678908830271257,
+          "unrestricted_key": "1,2,1|0000;01",
+          "one_on_one": 1.0416645833334792,
+          "by_composition": {
+            "4": 0.4999990000000004,
+            "2,2": 0.9999973333352015,
+            "3,1": 0.7499985000000743,
+            "1,2,1": 1.1678908830271257,
+            "2,1,1": 0.9166648333334761,
+            "1,1,1,1": 1.0416645833334792
+          },
+          "gain": 0.12117749006086376
+        },
+        {
+          "margin": 0.001,
+          "unrestricted": 1.1655574323761195,
+          "unrestricted_key": "1,2,1|0000;01",
+          "one_on_one": 1.039583333333383,
+          "by_composition": {
+            "4": 0.4990000000000009,
+            "2,2": 0.997335109926765,
+            "3,1": 0.748500000000047,
+            "1,2,1": 1.1655574323761195,
+            "2,1,1": 0.9148333333335409,
+            "1,1,1,1": 1.039583333333383
+          },
+          "gain": 0.12117749006114353
+        },
+        {
+          "margin": 0.005,
+          "unrestricted": 1.1562142866256002,
+          "unrestricted_key": "1,2,1|0000;01",
+          "one_on_one": 1.0312500000000988,
+          "by_composition": {
+            "4": 0.49500000000000066,
+            "2,2": 0.9867109634553181,
+            "3,1": 0.7425000000000447,
+            "1,2,1": 1.1562142866256002,
+            "2,1,1": 0.9075000000000852,
+            "1,1,1,1": 1.0312500000000988
+          },
+          "gain": 0.1211774900610807
+        },
+        {
+          "margin": 0.01,
+          "unrestricted": 1.1445353544373227,
+          "unrestricted_key": "1,2,1|0000;01",
+          "one_on_one": 1.020833333333472,
+          "by_composition": {
+            "4": 0.4900000000000009,
+            "2,2": 0.973509933774916,
+            "3,1": 0.7350000000000454,
+            "1,2,1": 1.1445353544373227,
+            "2,1,1": 0.8983333333334049,
+            "1,1,1,1": 1.020833333333472
+          },
+          "gain": 0.1211774900608984
+        },
+        {
+          "margin": 0.02,
+          "unrestricted": 1.1211774900615534,
+          "unrestricted_key": "1,2,1|0000;01",
+          "one_on_one": 1.0000000000001108,
+          "by_composition": {
+            "4": 0.48000000000000054,
+            "2,2": 0.9473684210527817,
+            "3,1": 0.7200000000003894,
+            "1,2,1": 1.1211774900615534,
+            "2,1,1": 0.8800000000001091,
+            "1,1,1,1": 1.0000000000001108
+          },
+          "gain": 0.1211774900614293
+        },
+        {
+          "margin": 0.05,
+          "unrestricted": 1.0511038969323132,
+          "unrestricted_key": "1,2,1|0000;01",
+          "one_on_one": 0.9375000000000991,
+          "by_composition": {
+            "4": 0.4500000000000006,
+            "2,2": 0.8709677419355316,
+            "3,1": 0.6750000000001897,
+            "1,2,1": 1.0511038969323132,
+            "2,1,1": 0.8250000000001916,
+            "1,1,1,1": 0.9375000000000991
+          },
+          "gain": 0.12117749006101541
+        }
+      ]
+    }
+  ],
+  "gates": {
+    "enumeration": true,
+    "reproduction": true,
+    "harmonic": true,
+    "verify": true,
+    "certificate": true,
+    "height": true,
+    "gain": true,
+    "margin": true,
+    "forces": true,
+    "spoken": true,
+    "wording": true
+  },
+  "source_sha256": {
+    "block_overhang": "8af0227efb8a3de3d5b238b22e5c3b7687867955972065aed567ce66618cc78c",
+    "block_overhang_gates": "1bdd5aab15b94b4e014f2f2aff19778234f8540e6394ba51cd484d04a137c237"
+  }
+}
