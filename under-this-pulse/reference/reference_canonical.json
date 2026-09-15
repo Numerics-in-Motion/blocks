@@ -1,0 +1,112 @@
+{
+ "source_sha256": {
+  "rocking_block": "fc49c616ebdeef351ff2e1544cf48fb232b39cc21a5379640f365d49302da9f0",
+  "rocking_block_gates": "25ac6ee670f54f48876ed531c077ceab6dfd9d83099c96f6d99bd3a77bddc650"
+ },
+ "registration": "design review, locked before the production run",
+ "run_source_sha256": "faf56ad7d16b1e502de3476547ee74f045496832171a59064912089475c924f7",
+ "run_source_note": "the production run used an earlier text of rocking_block.py whose only code difference is the default data directory; docstrings and a registration label were also reworded",
+ "claim": "In Housner's ideal rigid rocking model (planar rectangular block, slenderness 0.2 rad, no sliding or bouncing, rigid ground, impact factor 1 - 1.5 sin^2 alpha), under one sine pulse of peak 0.405 g lasting 0.5 s, the 0.98 m tall block overturned and the geometrically similar 3.92 m tall block did not; across the five registered sizes (R 0.25-4 m) the two smallest overturned.",
+ "headline_A2": {
+  "0.25": {
+   "outcome": "O",
+   "how": "energy outward",
+   "e_end": 2.6769386150468955,
+   "impacts": 1
+  },
+  "0.50": {
+   "outcome": "O",
+   "how": "energy outward",
+   "e_end": 1.7110938843062773,
+   "impacts": 1
+  },
+  "1.00": {
+   "outcome": "S",
+   "how": "energy outward",
+   "e_end": 0.9245234031270603,
+   "impacts": 1
+  },
+  "2.00": {
+   "outcome": "S",
+   "how": "energy outward",
+   "e_end": 0.4769203393150537,
+   "impacts": 1
+  },
+  "4.00": {
+   "outcome": "S",
+   "how": "energy outward",
+   "e_end": 0.24182371307625972,
+   "impacts": 1
+  }
+ },
+ "outcomes_A": {
+  "2.00": [
+   "O",
+   "O",
+   "S",
+   "S",
+   "S"
+  ],
+  "1.90": [
+   "O",
+   "O",
+   "S",
+   "S",
+   "S"
+  ],
+  "2.10": [
+   "O",
+   "O",
+   "S",
+   "S",
+   "S"
+  ]
+ },
+ "transitions": [
+  {
+   "R": 0.25,
+   "A_T": 1.2618896484375002,
+   "u_A": 4.882812518039112e-06
+  },
+  {
+   "R": 0.5,
+   "A_T": 1.4584423828125002,
+   "u_A": 4.882812520721272e-06
+  },
+  {
+   "R": 1.0,
+   "A_T": 2.1637841796875,
+   "u_A": 4.882812530855804e-06
+  },
+  {
+   "R": 2.0,
+   "A_T": 5.1549267578124995,
+   "u_A": 4.882812573362497e-06
+  }
+ ],
+ "rect": [
+  {
+   "ptd": 0.5,
+   "impl": "P",
+   "lo": 2.541875,
+   "hi": 2.5418847656250003,
+   "closed": 2.5414940825367984
+  },
+  {
+   "ptd": 1.0,
+   "impl": "P",
+   "lo": 1.5821875,
+   "hi": 1.582197265625,
+   "closed": 1.5819767068693265
+  },
+  {
+   "ptd": 2.0,
+   "impl": "P",
+   "lo": 1.1566601562499996,
+   "hi": 1.1566699218749996,
+   "closed": 1.1565176427496657
+  }
+ ],
+ "gates_passed": 10,
+ "gates_total": 10
+}

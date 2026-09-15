@@ -1,0 +1,853 @@
+{
+ "title": "UNDER THIS PULSE, THE BIGGER BLOCK STAYS STANDING",
+ "title_lines": [
+  "UNDER THIS PULSE,",
+  "THE BIGGER BLOCK STAYS STANDING"
+ ],
+ "claim": "In Housner's ideal rigid rocking model (planar rectangular block, slenderness 0.2 rad, no sliding or bouncing, rigid ground, impact factor 1 - 1.5 sin^2 alpha), under one sine pulse of peak 0.405 g lasting 0.5 s, the 0.98 m tall block overturned and the geometrically similar 3.92 m tall block did not; across the five registered sizes (R 0.25-4 m) the two smallest overturned.",
+ "on_screen": {
+  "same": "SAME SHAPE. SAME PULSE. ONLY THE SIZE CHANGES.",
+  "over": "OVERTURNED",
+  "standing": "STILL STANDING",
+  "standing_row": "STANDING",
+  "height_row_format": "{h:.2f} m",
+  "snapshots": "SOLVER SNAPSHOTS \u2014 SIMULATED TIME",
+  "first_contact": "FIRST SIDE CONTACT",
+  "side": "POST-THRESHOLD MOTION ENDS AT FIRST SIDE CONTACT; THAT IMPACT IS NOT MODELLED",
+  "side_1": "POST-THRESHOLD MOTION ENDS AT FIRST SIDE CONTACT;",
+  "side_2": "THAT IMPACT IS NOT MODELLED",
+  "ideal_short": "IDEAL RIGID-BLOCK MODEL",
+  "clock_format": "t = {t:.2f} s",
+  "ground": "GROUND ACCELERATION",
+  "energy_head": "ROCKING ENERGY AT PULSE END",
+  "tip_line": "TIP-OVER ENERGY BARRIER",
+  "why": "IN THIS RIGID ROCKING MODEL, A BIGGER BLOCK ROCKS MORE SLOWLY",
+  "five": "ACROSS FIVE SIZES, THE TWO SMALLEST OVERTURNED",
+  "model": "IDEAL MODEL: RIGID BLOCK, NO SLIDING OR BOUNCING, RIGID GROUND",
+  "pulse_note": "ONE IDEALISED PULSE, NOT A RECORDED GROUND MOTION",
+  "limits": "NOT A RATING FOR ANY REAL STATUE, TOMBSTONE OR ROCK",
+  "pulse": "ONE SINE PULSE: PEAK 0.41 g, 0.5 s",
+  "height_small": "0.98 m TALL",
+  "height_big": "3.92 m TALL",
+  "energy_small": "1.71 \u00d7 BARRIER",
+  "energy_big": "0.48 \u00d7 BARRIER"
+ },
+ "silent": {
+  "result": "0.98 m block overturned; 3.92 m block standing",
+  "limits": [
+   "ideal rigid block, no sliding or bouncing",
+   "not a recorded ground motion; not a rating for any real object",
+   "drawn to first side contact; that impact is not modelled"
+  ]
+ },
+ "narration": {
+  "a1": "Two blocks with the same shape. The big one is four times as tall and four times as wide.",
+  "b1": "The ground gives both the same single pulse, half a second long.",
+  "b2": "After the pulse, the small one tips over. The big one keeps rocking without overturning.",
+  "c1": "Again, at selected simulated times.",
+  "d1": "At the end of the pulse, the small block's rocking energy was one point seven times the tip-over energy barrier. The big one's was less than half.",
+  "d2": "In this rigid rocking model, a bigger block rocks more slowly.",
+  "e1": "Across five sizes, the two smallest overturned.",
+  "z1": "One idealised pulse, and a rigid block that cannot slide or bounce: not a rating for any real statue."
+ },
+ "values": {
+  "e_small": 1.7110938843062773,
+  "u_e_small": 3.5418336840198735e-14,
+  "e_big": 0.4769203393150537,
+  "u_e_big": 1.4210854715202004e-14,
+  "h_small": 0.9800665778412416,
+  "h_big": 3.9202663113649665,
+  "apg": 0.405420071017345,
+  "Tp": 0.5,
+  "size_ratio": 4.0,
+  "outcomes": [
+   "O",
+   "O",
+   "S",
+   "S",
+   "S"
+  ],
+  "sizes": [
+   0.25,
+   0.5,
+   1.0,
+   2.0,
+   4.0
+  ],
+  "heights": [
+   0.4900332889206208,
+   0.9800665778412416,
+   1.9601331556824833,
+   3.9202663113649665,
+   7.840532622729933
+  ],
+  "snapshot_times": [
+   0.0,
+   0.25,
+   0.5,
+   0.75,
+   1.0,
+   "first side contact"
+  ]
+ },
+ "source_sha256": "faf56ad7d16b1e502de3476547ee74f045496832171a59064912089475c924f7",
+ "runtime_s": 625.6719303131104,
+ "gates": [
+  {
+   "name": "anchors",
+   "uplift": {
+    "max_err": 5.551115123125783e-16,
+    "n": 10060,
+    "passes": true
+   },
+   "impact": {
+    "max_ratio_or_energy_err": 4.440892098500626e-16,
+    "passes": true
+   },
+   "rect": [
+    {
+     "ptd": 0.5,
+     "impl": "P",
+     "bracket": [
+      2.541875,
+      2.5418847656250003
+     ],
+     "closed": 2.5414940825367984,
+     "rel_err": 0.00015372181697622989,
+     "passes": true
+    },
+    {
+     "ptd": 0.5,
+     "impl": "T",
+     "bracket": [
+      2.541875,
+      2.5418847656250003
+     ],
+     "closed": 2.5414940825367984,
+     "rel_err": 0.00015372181697622989,
+     "passes": true
+    },
+    {
+     "ptd": 0.5,
+     "impl": "E",
+     "bracket": [
+      2.541875,
+      2.5418847656250003
+     ],
+     "closed": 2.5414940825367984,
+     "rel_err": 0.00015372181697622989,
+     "passes": true
+    },
+    {
+     "ptd": 0.5,
+     "impl": "E2",
+     "bracket": [
+      2.541875,
+      2.5418847656250003
+     ],
+     "closed": 2.5414940825367984,
+     "rel_err": 0.00015372181697622989,
+     "passes": true
+    },
+    {
+     "ptd": 1.0,
+     "impl": "P",
+     "bracket": [
+      1.5821875,
+      1.582197265625
+     ],
+     "closed": 1.5819767068693265,
+     "rel_err": 0.00013941972389093784,
+     "passes": true
+    },
+    {
+     "ptd": 1.0,
+     "impl": "T",
+     "bracket": [
+      1.5821875,
+      1.582197265625
+     ],
+     "closed": 1.5819767068693265,
+     "rel_err": 0.00013941972389093784,
+     "passes": true
+    },
+    {
+     "ptd": 1.0,
+     "impl": "E",
+     "bracket": [
+      1.5821875,
+      1.582197265625
+     ],
+     "closed": 1.5819767068693265,
+     "rel_err": 0.00013941972389093784,
+     "passes": true
+    },
+    {
+     "ptd": 1.0,
+     "impl": "E2",
+     "bracket": [
+      1.5821875,
+      1.582197265625
+     ],
+     "closed": 1.5819767068693265,
+     "rel_err": 0.00013941972389093784,
+     "passes": true
+    },
+    {
+     "ptd": 2.0,
+     "impl": "P",
+     "bracket": [
+      1.1566601562499996,
+      1.1566699218749996
+     ],
+     "closed": 1.1565176427496657,
+     "rel_err": 0.00013167038677580202,
+     "passes": true
+    },
+    {
+     "ptd": 2.0,
+     "impl": "T",
+     "bracket": [
+      1.1566601562499996,
+      1.1566699218749996
+     ],
+     "closed": 1.1565176427496657,
+     "rel_err": 0.00013167038677580202,
+     "passes": true
+    },
+    {
+     "ptd": 2.0,
+     "impl": "E",
+     "bracket": [
+      1.1566601562499996,
+      1.1566699218749996
+     ],
+     "closed": 1.1565176427496657,
+     "rel_err": 0.00013167038677580202,
+     "passes": true
+    },
+    {
+     "ptd": 2.0,
+     "impl": "E2",
+     "bracket": [
+      1.1566601562499996,
+      1.1566699218749996
+     ],
+     "closed": 1.1565176427496657,
+     "rel_err": 0.00013167038677580202,
+     "passes": true
+    }
+   ],
+   "similarity": [
+    {
+     "pair": [
+      [
+       0.5,
+       0.25
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "outcomes": [
+      "O",
+      "O"
+     ],
+     "impacts": [
+      1,
+      1
+     ],
+     "discrepancy": 0.0,
+     "u_x": 8.781318358327787e-07,
+     "tolerance": 2.634395507498336e-06,
+     "passes": true
+    },
+    {
+     "pair": [
+      [
+       0.5,
+       0.5
+      ],
+      [
+       1.0,
+       2.0
+      ]
+     ],
+     "outcomes": [
+      "O",
+      "O"
+     ],
+     "impacts": [
+      1,
+      1
+     ],
+     "discrepancy": 0.0,
+     "u_x": 1.8924342344919798e-14,
+     "tolerance": 1e-08,
+     "passes": true
+    },
+    {
+     "pair": [
+      [
+       0.5,
+       1.0
+      ],
+      [
+       1.0,
+       4.0
+      ]
+     ],
+     "outcomes": [
+      "S",
+      "S"
+     ],
+     "impacts": [
+      1,
+      1
+     ],
+     "discrepancy": 0.0,
+     "u_x": 1.5376588891058418e-14,
+     "tolerance": 1e-08,
+     "passes": true
+    }
+   ],
+   "passes": true
+  },
+  {
+   "name": "audits",
+   "failures": [],
+   "n_failures": 0,
+   "n_solves": 10080,
+   "n_bisections": 16,
+   "unresolved_cells": [],
+   "unmatched_transitions": [],
+   "diagnostics": {
+    "e_vs_e2_event_time_max": 1.556492712495583e-10,
+    "e_vs_e2_event_time_cell": [
+     0.25,
+     1.03,
+     1.0,
+     "sine",
+     0.5
+    ],
+    "v_rest_triggers": 76,
+    "v_rest_records": 56,
+    "v_rest_cells": [
+     [
+      0.25,
+      1.01,
+      1.0
+     ],
+     [
+      0.25,
+      1.02,
+      1.0
+     ],
+     [
+      0.5,
+      1.01,
+      1.0
+     ],
+     [
+      0.5,
+      1.02,
+      1.0
+     ],
+     [
+      0.5,
+      1.03,
+      1.0
+     ],
+     [
+      1.0,
+      1.01,
+      1.0
+     ],
+     [
+      1.0,
+      1.02,
+      1.0
+     ],
+     [
+      1.0,
+      1.03,
+      1.0
+     ],
+     [
+      2.0,
+      1.01,
+      1.0
+     ],
+     [
+      2.0,
+      1.02,
+      1.0
+     ],
+     [
+      2.0,
+      1.03,
+      1.0
+     ],
+     [
+      4.0,
+      1.01,
+      1.0
+     ],
+     [
+      4.0,
+      1.02,
+      1.0
+     ],
+     [
+      4.0,
+      1.03,
+      1.0
+     ]
+    ],
+    "impact_counts_cutoff_dependent_in": [
+     [
+      0.25,
+      1.01,
+      1.0
+     ],
+     [
+      0.25,
+      1.02,
+      1.0
+     ],
+     [
+      0.5,
+      1.01,
+      1.0
+     ],
+     [
+      0.5,
+      1.02,
+      1.0
+     ],
+     [
+      0.5,
+      1.03,
+      1.0
+     ],
+     [
+      1.0,
+      1.01,
+      1.0
+     ],
+     [
+      1.0,
+      1.02,
+      1.0
+     ],
+     [
+      1.0,
+      1.03,
+      1.0
+     ],
+     [
+      2.0,
+      1.01,
+      1.0
+     ],
+     [
+      2.0,
+      1.02,
+      1.0
+     ],
+     [
+      2.0,
+      1.03,
+      1.0
+     ],
+     [
+      4.0,
+      1.01,
+      1.0
+     ],
+     [
+      4.0,
+      1.02,
+      1.0
+     ],
+     [
+      4.0,
+      1.03,
+      1.0
+     ]
+    ]
+   },
+   "passes": true
+  },
+  {
+   "name": "impacts",
+   "worst": {
+    "residual": 4.048454280147773e-14,
+    "ratio": 4.440892098500626e-16,
+    "chronological": true
+   },
+   "passes": true
+  },
+  {
+   "name": "headline",
+   "outcomes": {
+    "2.00": [
+     "O",
+     "O",
+     "S",
+     "S",
+     "S"
+    ],
+    "1.90": [
+     "O",
+     "O",
+     "S",
+     "S",
+     "S"
+    ],
+    "2.10": [
+     "O",
+     "O",
+     "S",
+     "S",
+     "S"
+    ]
+   },
+   "expected": [
+    "O",
+    "O",
+    "S",
+    "S",
+    "S"
+   ],
+   "clearance": [
+    {
+     "R": 0.25,
+     "nearest": {
+      "distance": 0.7381103515624998,
+      "needed": 0.10001464843755413,
+      "grid": [
+       1.26,
+       1.27
+      ],
+      "A_T": 1.2618896484375002,
+      "u_A": 4.882812518039112e-06
+     },
+     "passes": true
+    },
+    {
+     "R": 0.5,
+     "nearest": {
+      "distance": 0.5415576171874998,
+      "needed": 0.10001464843756216,
+      "grid": [
+       1.45,
+       1.46
+      ],
+      "A_T": 1.4584423828125002,
+      "u_A": 4.882812520721272e-06
+     },
+     "passes": true
+    },
+    {
+     "R": 1.0,
+     "nearest": {
+      "distance": 0.16378417968750014,
+      "needed": 0.10001464843759257,
+      "grid": [
+       2.16,
+       2.17
+      ],
+      "A_T": 2.1637841796875,
+      "u_A": 4.882812530855804e-06
+     },
+     "passes": true
+    },
+    {
+     "R": 2.0,
+     "nearest": {
+      "distance": 3.1549267578124995,
+      "needed": 0.1000146484377201,
+      "grid": [
+       5.15,
+       5.16
+      ],
+      "A_T": 5.1549267578124995,
+      "u_A": 4.882812573362497e-06
+     },
+     "passes": true
+    },
+    {
+     "R": 4.0,
+     "nearest": null,
+     "passes": true
+    }
+   ],
+   "passes": true
+  },
+  {
+   "name": "restitution",
+   "rows": [
+    {
+     "cv_factor": 0.8,
+     "R0.25": "O",
+     "R0.50": "O",
+     "R1.00": "S",
+     "R2.00": "S",
+     "R4.00": "S"
+    },
+    {
+     "cv_factor": 0.9,
+     "R0.25": "O",
+     "R0.50": "O",
+     "R1.00": "S",
+     "R2.00": "S",
+     "R4.00": "S"
+    },
+    {
+     "cv_factor": 1.0,
+     "R0.25": "O",
+     "R0.50": "O",
+     "R1.00": "S",
+     "R2.00": "S",
+     "R4.00": "S"
+    }
+   ],
+   "passes": true
+  },
+  {
+   "name": "contact",
+   "claimed": [
+    {
+     "Nmin": 0.8647241079560688,
+     "u_Nmin": 1.509903313490213e-14,
+     "mu": 0.24582509891525353,
+     "u_mu": 2.226062786880867e-07,
+     "applicable": true,
+     "R": 0.25
+    },
+    {
+     "Nmin": 0.8849763085302287,
+     "u_Nmin": 1.4765966227514582e-14,
+     "mu": 0.2485432629514858,
+     "u_mu": 4.34498443557807e-07,
+     "applicable": true,
+     "R": 0.5
+    },
+    {
+     "Nmin": 0.9008767651551437,
+     "u_Nmin": 1.4432899320127035e-14,
+     "mu": 0.25013705751790116,
+     "u_mu": 1.4210854715202004e-14,
+     "applicable": true,
+     "R": 1.0
+    },
+    {
+     "Nmin": 0.9087797026987179,
+     "u_Nmin": 8.506890214476925e-08,
+     "mu": 0.25100609022650106,
+     "u_mu": 1.4210854715202004e-14,
+     "applicable": true,
+     "R": 2.0
+    },
+    {
+     "Nmin": 0.910658739545362,
+     "u_Nmin": 1.468262308401691e-07,
+     "mu": 0.25146107024087655,
+     "u_mu": 8.127726636164567e-08,
+     "applicable": true,
+     "R": 4.0
+    }
+   ],
+   "reported_cells": 2520,
+   "reported_outside_bounds": 1401,
+   "ideal_constraint_result_cells": {
+    "label": "ideal no-slip/no-flight constraint result",
+    "bounds": {
+     "N_min": 0.8,
+     "mu_max": 0.3
+    },
+    "amplitude_ranges": {
+     "R0.25": [
+      [
+       3.46,
+       6.0
+      ]
+     ],
+     "R0.50": [
+      [
+       3.26,
+       6.0
+      ]
+     ],
+     "R1.00": [
+      [
+       3.15,
+       6.0
+      ]
+     ],
+     "R2.00": [
+      [
+       3.1,
+       6.0
+      ]
+     ],
+     "R4.00": [
+      [
+       3.07,
+       6.0
+      ]
+     ]
+    },
+    "restitution_cells": []
+   },
+   "passes": true
+  },
+  {
+   "name": "similarity",
+   "pairs": [
+    {
+     "pair": [
+      [
+       0.5,
+       0.25
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "outcomes": [
+      "O",
+      "O"
+     ],
+     "impacts": [
+      1,
+      1
+     ],
+     "discrepancy": 0.0,
+     "u_x": 8.781318358327787e-07,
+     "tolerance": 2.634395507498336e-06,
+     "passes": true
+    },
+    {
+     "pair": [
+      [
+       0.5,
+       0.5
+      ],
+      [
+       1.0,
+       2.0
+      ]
+     ],
+     "outcomes": [
+      "O",
+      "O"
+     ],
+     "impacts": [
+      1,
+      1
+     ],
+     "discrepancy": 0.0,
+     "u_x": 1.8924342344919798e-14,
+     "tolerance": 1e-08,
+     "passes": true
+    },
+    {
+     "pair": [
+      [
+       0.5,
+       1.0
+      ],
+      [
+       1.0,
+       4.0
+      ]
+     ],
+     "outcomes": [
+      "S",
+      "S"
+     ],
+     "impacts": [
+      1,
+      1
+     ],
+     "discrepancy": 0.0,
+     "u_x": 1.5376588891058418e-14,
+     "tolerance": 1e-08,
+     "passes": true
+    }
+   ],
+   "passes": true
+  },
+  {
+   "name": "animation",
+   "rows": [
+    {
+     "R": 0.25,
+     "outcome": "O",
+     "table": "O",
+     "after": "lies on its side",
+     "passes": true
+    },
+    {
+     "R": 0.5,
+     "outcome": "O",
+     "table": "O",
+     "after": "lies on its side",
+     "passes": true
+    },
+    {
+     "R": 1.0,
+     "outcome": "S",
+     "table": "S",
+     "after": null,
+     "passes": true
+    },
+    {
+     "R": 2.0,
+     "outcome": "S",
+     "table": "S",
+     "after": null,
+     "passes": true
+    },
+    {
+     "R": 4.0,
+     "outcome": "S",
+     "table": "S",
+     "after": null,
+     "passes": true
+    }
+   ],
+   "passes": true
+  },
+  {
+   "name": "spoken",
+   "checks": {
+    "d1_small": [
+     1.7,
+     1.7
+    ],
+    "d1_big_below": [
+     true,
+     true
+    ],
+    "display_precision": [
+     true,
+     true
+    ]
+   },
+   "passes": true
+  },
+  {
+   "name": "wording",
+   "hits": [],
+   "n_texts": 40,
+   "passes": true
+  }
+ ],
+ "passed": 10,
+ "total": 10
+}
